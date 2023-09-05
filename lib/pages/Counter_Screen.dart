@@ -60,28 +60,23 @@ class _CounterScreenState extends State<CounterScreen> {
             },
             icono: Icons.plus_one_outlined,
           ),
-        FloatingActionButton(
-            shape: const StadiumBorder(),
-            onPressed: () {
+        CustomButton(
+            onPressed: (){
               setState(() {
                 contador=0;
               });
             },
-            child: const Icon(
-              Icons.restart_alt_rounded,
-            ),
-        ),
-        FloatingActionButton(
-            shape: const StadiumBorder(),
-            onPressed: () {
+            icono: Icons.restart_alt_rounded,
+          ),
+        CustomButton(
+            onPressed: (){
               setState(() {
                 contador=numeroAleatorioEntero;  
               });
             },
-            child: const Icon(
-              Icons.shuffle,
-            ),
-        )],
+            icono: Icons.shuffle,
+          )
+        ],
       ),
     );
   }
